@@ -21,6 +21,16 @@ class App extends Component {
     })
   }
 
+  nameInputHandler = event => {
+    this.setState({
+      people: [
+        {name: 'Braden', yearsAtCompany: (Math.floor(Math.random() * 20) + 1)},
+        {name: event.target.value, yearsAtCompany: (Math.floor(Math.random() * 20) + 1)},
+        {name: 'Michael', yearsAtCompany: (Math.floor(Math.random() * 20) + 1)}
+      ]
+    })
+  }
+
   render() {
     return (
       <div className="App">
@@ -31,7 +41,8 @@ class App extends Component {
           yearsAtCompany={this.state.people[0].yearsAtCompany} />
         <Person 
           name={this.state.people[1].name} 
-          yearsAtCompany={this.state.people[1].yearsAtCompany}>Currently on leave.</Person>
+          yearsAtCompany={this.state.people[1].yearsAtCompany}
+          change={this.nameInputHandler}>Currently on leave.</Person>
         <Person 
           name={this.state.people[2].name} 
           yearsAtCompany={this.state.people[2].yearsAtCompany}
