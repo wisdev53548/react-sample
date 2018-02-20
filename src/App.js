@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Person from './Person/Person'
 import './App.css';
 
 class App extends Component {
@@ -6,11 +7,10 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Hey, this is a REACT app.</h1>
+        <Person />
       </div>
     );
   }
 }
 
 export default App;
-
-// return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Hey, this is a REACT app.'))
