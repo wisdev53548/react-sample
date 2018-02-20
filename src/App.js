@@ -5,9 +5,9 @@ import './App.css';
 class App extends Component {
   state = {
     people: [
-      {name: 'Jack', age: (Math.floor(Math.random() * 20) + 1)},
-      {name: 'Ethan', age: (Math.floor(Math.random() * 20) + 1)},
-      {name: 'Michael', age: (Math.floor(Math.random() * 20) + 1)}
+      {name: 'Jack', yearsAtCompany: (Math.floor(Math.random() * 20) + 1)},
+      {name: 'Ethan', yearsAtCompany: (Math.floor(Math.random() * 20) + 1)},
+      {name: 'Michael', yearsAtCompany: (Math.floor(Math.random() * 20) + 1)}
     ]
   }
 
@@ -15,9 +15,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Company Roster</h1>
-        <Person name={this.state.people[0].name} age={this.state.people[0].age} />
-        <Person name={this.state.people[1].name} age={this.state.people[1].age}>I will be the CEO</Person>
-        <Person name={this.state.people[2].name} age={this.state.people[2].age} />
+        <Person name={this.state.people[0].name} yearsAtCompany={this.state.people[0].yearsAtCompany} />
+        <Person name={this.state.people[1].name} yearsAtCompany={this.state.people[1].yearsAtCompany}>Currently on leave.</Person>
+        <Person name={this.state.people[2].name} yearsAtCompany={this.state.people[2].yearsAtCompany} />
       </div>
     );
   }
